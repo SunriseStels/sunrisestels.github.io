@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+$main-color: #020F38;
+$pink-color: #FFEAEC;
+$blue-color: #82ADFF;
+$green-color: #97D9B4;
+
+.Layout {
+  width: 100%;
+  height: 100vh;
+  background-color: $main-color;
+  font-family: 'Open Sans', sans-serif;
+  padding: 15px;
+  font-weight: 600;
+  box-sizing: border-box;
+  .Title {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  .LayoutMost {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: $main-color;
+    > div {
+      height: 100px;
+      border-radius: 15px;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+      padding: 15px;
+      overflow: hidden;
+      position: relative;
+      .title {
+        margin-bottom: 10px;
+      }
+      .time {
+        font-size: 13px;
+        font-weight: 600;
+      }
+      &:first-child {
+        flex-basis: 100%;
+      }
+      &:nth-child(2) {
+        flex-basis: 37%;
+      }
+      &:last-child {
+        flex-basis: 60%;
+        margin-left: auto;
+      }
+    }
+    //color
+    .pink {
+      background-color: $pink-color;
+    }
+    .blue {
+      background-color: $blue-color;
+    }
+    .green {
+      background-color: $green-color;
+    }
+    //figure
+    .circle {
+      &:after {
+        content: '';
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        background: linear-gradient(to top, #f4aed0, #FFB9DB);
+        position: absolute;
+        right: -30px;
+        top: 30px;
+      }
+    }
+    .square {
+      &:after {
+        content: '';
+        width: 90px;
+        height: 90px;
+        transform: rotate(45deg);
+        background: linear-gradient(to top, #6e48d9, #8f70e7);
+        position: absolute;
+        right: -30px;
+        top: 40px;
+      }
+    }
+  }
+}
